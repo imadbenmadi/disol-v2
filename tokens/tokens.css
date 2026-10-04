@@ -1,0 +1,164 @@
+/* Disol design system tokens. Generated from tokens.json; do not edit by hand. */
+
+@font-face { font-family: "Geist"; src: url("../fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Geist Mono"; src: url("../fonts/GeistMono-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("../fonts/InstrumentSerif-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("../fonts/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root, [data-theme="dark"] {
+  color-scheme: dark;
+  --brand-50: #eaf6fc;
+  --brand-100: #d4edf9;
+  --brand-200: #9fd7f2;
+  --brand-300: #6cc8f2;
+  --brand-400: #3fb2e6;
+  --brand-500: #1692c8;
+  --brand-600: #0077b3;
+  --brand-700: #006699;
+  --brand-800: #0b4f75;
+  --brand-900: #0c3a55;
+  --bg: #07090c;
+  --surface: #0c1015;
+  --surface-sunken: #090c10;
+  --surface-raised: #12181f;
+  --surface-hover: #161d26;
+  --border: #1c2530;
+  --border-strong: #56677a;
+  --text: #e8eef4;
+  --text-muted: #8b98a6;
+  --text-inverse: #0f1b26;
+  --inverse: #e8eef4;
+  --primary: var(--brand-400);
+  --primary-hover: var(--brand-300);
+  --on-primary: #04111a;
+  --primary-soft: #0d2433;
+  --primary-soft-text: #a8dcf5;
+  --focus-ring: var(--brand-300);
+  --glow: rgba(63, 178, 230, 0.45);
+  --grid-dot: rgba(232, 238, 244, 0.07);
+  --glass: rgba(18, 24, 31, 0.72);
+  --success: #4cc28c;
+  --on-success: #04131d;
+  --success-soft: #0f2a1f;
+  --warning: #f6bc63;
+  --warning-fill: #f6bc63;
+  --on-warning: #0f1b26;
+  --warning-soft: #2e2210;
+  --danger: #ff7a7a;
+  --danger-hover: #ff9a9a;
+  --on-danger: #04131d;
+  --danger-soft: #3a1517;
+  --chart-1: var(--brand-500);
+  --chart-2: #cf74e9;
+  --chart-3: #f6bc63;
+  --chart-4: #5fbf93;
+  --chart-5: #9aa8b6;
+  --scrim: rgba(0, 0, 0, 0.64);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 8px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 24px 64px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 0 1px rgba(63, 178, 230, 0.35), 0 8px 32px -6px rgba(63, 178, 230, 0.55);
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface-sunken: #eef1f5;
+  --surface-raised: #ffffff;
+  --surface-hover: #f0f4f8;
+  --border: #dde3ea;
+  --border-strong: #7d8a99;
+  --text: #0f1b26;
+  --text-muted: #52606e;
+  --text-inverse: #ffffff;
+  --inverse: #0f1b26;
+  --primary: var(--brand-600);
+  --primary-hover: var(--brand-700);
+  --on-primary: #ffffff;
+  --primary-soft: var(--brand-50);
+  --primary-soft-text: var(--brand-700);
+  --focus-ring: var(--brand-500);
+  --glow: rgba(22, 146, 200, 0.25);
+  --grid-dot: rgba(15, 27, 38, 0.08);
+  --glass: rgba(255, 255, 255, 0.72);
+  --success: #1d7a50;
+  --on-success: #ffffff;
+  --success-soft: #e7f5ee;
+  --warning: #8a5a00;
+  --warning-fill: #f6bc63;
+  --warning-soft: #fdf3e1;
+  --danger: #c8282d;
+  --danger-hover: #a81f24;
+  --on-danger: #ffffff;
+  --danger-soft: #fdeced;
+  --chart-2: #a94fcc;
+  --chart-3: #b07a12;
+  --chart-4: #2f8a62;
+  --chart-5: #52606e;
+  --scrim: rgba(8, 15, 22, 0.48);
+  --shadow-xs: 0 1px 2px rgba(15, 27, 38, 0.06);
+  --shadow-sm: 0 1px 3px rgba(15, 27, 38, 0.08), 0 1px 2px rgba(15, 27, 38, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 27, 38, 0.08), 0 2px 4px rgba(15, 27, 38, 0.04);
+  --shadow-lg: 0 16px 40px rgba(15, 27, 38, 0.14), 0 4px 12px rgba(15, 27, 38, 0.06);
+  --shadow-glow: 0 0 0 1px rgba(22, 146, 200, 0.3), 0 8px 24px -8px rgba(22, 146, 200, 0.45);
+}
+:root {
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  --control-sm: 32px;
+  --control-md: 40px;
+  --control-lg: 48px;
+  --sidebar-width: 256px;
+  --topbar-height: 64px;
+  --content-max: 1200px;
+  --z-sticky: 100;
+  --z-dropdown: 1000;
+  --z-modal: 1300;
+  --z-toast: 1400;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --font-sans: Geist, "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-arabic: "IBM Plex Sans Arabic", Geist, system-ui, sans-serif;
+}
+
+.text-display-xl { font-family: var(--font-sans); font-size: 64px; line-height: 68px; font-weight: 600; letter-spacing: -0.035em; }
+.text-display-accent { font-family: var(--font-serif); font-size: 64px; line-height: 68px; font-weight: 400; letter-spacing: -0.01em; font-style: italic; }
+.text-display { font-family: var(--font-sans); font-size: 44px; line-height: 50px; font-weight: 600; letter-spacing: -0.03em; }
+.text-h1 { font-family: var(--font-sans); font-size: 30px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em; }
+.text-h2 { font-family: var(--font-sans); font-size: 22px; line-height: 30px; font-weight: 600; letter-spacing: -0.015em; }
+.text-h3 { font-family: var(--font-sans); font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -0.01em; }
+.text-body-lg { font-family: var(--font-sans); font-size: 17px; line-height: 28px; font-weight: 400; }
+.text-body { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 400; }
+.text-body-strong { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 500; }
+.text-small { font-family: var(--font-sans); font-size: 13px; line-height: 20px; font-weight: 400; }
+.text-caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; }
+.text-label-mono { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0.01em; }
+.text-code { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }
+.text-ar-display { font-family: var(--font-arabic); font-size: 52px; line-height: 72px; font-weight: 700; }
+.text-ar-h1 { font-family: var(--font-arabic); font-size: 28px; line-height: 40px; font-weight: 700; }
+.text-ar-body { font-family: var(--font-arabic); font-size: 15px; line-height: 26px; font-weight: 400; }

@@ -1,0 +1,16 @@
+<!-- @dsCard group="Marketing" height=440 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>ServiceCard — preview</title></head>
+<body>
+<div id="root" class="ds-preview" style="display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.ServiceCard, { icon: 'globe', category: 'build', title: 'Website development', description: 'Fast, bilingual websites with a CMS your team can edit.', features: ['Arabic, French and English', 'SEO and analytics set up', 'Hosting included for 12 months'], price: { amount: 'on quote', prefix: null }, action: h(D.Button, { variant: 'secondary', size: 'sm', iconEnd: 'arrow-right' }, 'Details') }),
+    h(D.ServiceCard, { featured: true, icon: 'server', category: 'cloud', badge: h(D.Badge, { tone: 'brand' }, 'Managed'), title: 'Managed hosting', description: 'We run your servers: backups, updates, monitoring and on-call.', features: ['Daily off-site backups', '24/7 uptime monitoring', 'SSL and security patches'], price: { amount: 'DZD 4,500', unit: '/ month' }, action: h(D.Button, { size: 'sm', iconEnd: 'arrow-right' }, 'Get started') }),
+    h(D.ServiceCard, { icon: 'megaphone', category: 'marketing', title: 'Campaigns & ads', description: 'Paid social and search campaigns with clear monthly reporting.', features: ['Strategy and creatives', 'Meta and Google Ads', 'Monthly performance report'], price: { amount: 'DZD 30,000', unit: '/ month' }, action: h(D.Button, { variant: 'secondary', size: 'sm', iconEnd: 'arrow-right' }, 'Details') })
+  ));
+</script>
+</body>
+</html>

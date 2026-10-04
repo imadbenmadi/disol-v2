@@ -1,0 +1,45 @@
+<!-- @dsCard group="Patterns" height=560 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>HeroPattern — preview</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { className: 'ds-grid-bg', style: { position: 'relative', height: 560, overflow: 'hidden', background: 'var(--bg)' } },
+      h('div', { className: 'ds-glow-bloom', style: { width: 520, height: 420, right: -60, top: 80 } }),
+      h(D.Navbar, { solid: false, brand: [h('img', { key: 'i', src: '../../assets/logos/disol-app-icon.jpg', alt: '' }), h('span', { key: 't' }, 'Disol')], links: [{ label: 'Services', href: '#' }, { label: 'Cloud', href: '#' }, { label: 'Work', href: '#' }, { label: 'Pricing', href: '#' }], actions: [h(D.StatusPill, { key: 's' }), h(D.Button, { key: 'c', size: 'sm', pill: true }, 'Start a project')] }),
+      h('div', { style: { position: 'absolute', left: 40, top: 128, width: 500 } },
+        h(D.SectionHeading, {
+          size: 'xl', eyebrow: h(D.Tag, { dot: true }, 'now onboarding / algiers region'),
+          title: 'Infrastructure,', accent: 'handled.',
+          description: 'Disol designs, builds and runs the software your business depends on: websites, apps, ERPs and the cloud underneath.',
+          actions: [h(D.Button, { key: 1, size: 'lg', pill: true }, 'Start a project'), h(D.Button, { key: 2, size: 'lg', pill: true, variant: 'secondary', icon: 'play' }, 'See how we work')],
+          footnote: 'free consultation / reply within one business day'
+        })),
+      h('div', { style: { position: 'absolute', left: 560, top: 120, width: 560 } },
+        h(D.FlowCanvas, Object.assign({
+      title: 'New client request', meta: '4 steps / 1 branch', status: h(D.Badge, { tone: 'brand', dot: true }, 'running'), height: 236,
+      nodes: [
+        { id: 'a', x: 20, y: 90, width: 152, title: 'Lead received', meta: 'contact form', ports: 'out', state: 'active' },
+        { id: 'b', x: 204, y: 30, width: 152, title: 'Scope & quote', meta: 'sales · 2h sla' },
+        { id: 'c', x: 204, y: 150, width: 152, title: 'Provision hosting', meta: 'dz-alg-1 · 3 vms', state: 'active' },
+        { id: 'd', x: 388, y: 90, width: 152, title: 'Deploy', meta: 'waiting on approval', ports: 'in', state: 'waiting' }
+      ],
+      edges: [
+        { from: 'a', to: 'b' },
+        { from: 'a', to: 'c', live: true },
+        { from: 'b', to: 'd' },
+        { from: 'c', to: 'd', live: true }
+      ]
+    }, { height: 236 }),
+          h(D.RunLog, { title: 'last runs', items: [
+            { time: '09:41:49', text: 'provision dz-alg-1 / 3 vms', status: 'running', duration: '—' },
+            { time: '09:41:02', text: 'backup db-clinic-01', status: 'success', duration: '134 ms' },
+            { time: '09:38:57', text: 'lead routed to sales', status: 'success', duration: '2.1 s' }
+          ] }))))
+  ));
+</script>
+</body>
+</html>

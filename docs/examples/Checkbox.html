@@ -1,0 +1,18 @@
+<!-- @dsCard group="Forms" height=120 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Checkbox — preview</title></head>
+<body>
+<div id="root" class="ds-preview" style="align-items:flex-start;gap:24px;"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Checkbox, { label: 'Send invoice by email', defaultChecked: true }),
+    h(D.Checkbox, { label: 'Recurring', description: 'Bill this client every month on the same date.' }),
+    h(D.Checkbox, { label: 'Some selected', indeterminate: true, readOnly: true }),
+    h(D.Checkbox, { label: 'Disabled', disabled: true })
+  ));
+</script>
+</body>
+</html>

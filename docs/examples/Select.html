@@ -1,0 +1,17 @@
+<!-- @dsCard group="Forms" height=120 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Select — preview</title></head>
+<body>
+<div id="root" class="ds-preview" style="display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Select, { label: 'Status', options: ['Draft', 'Sent', 'Paid', 'Overdue'], defaultValue: 'Sent' }),
+    h(D.Select, { label: 'Assign to', placeholder: 'Choose a worker', options: [{ value: 'a', label: 'Allanazar Atayev' }, { value: 'i', label: 'Imed-eddin' }] }),
+    h(D.Select, { label: 'Currency', options: ['DZD', 'EUR', 'USD'], error: 'Choose the client’s billing currency' })
+  ));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Marketing" height=380 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>SectionHeading — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.SectionHeading, {
+      size: 'xl', eyebrow: h(D.Tag, { dot: true }, 'now onboarding / algiers region'),
+      title: 'Infrastructure,', accent: 'handled.',
+      description: 'Disol designs, builds and runs the software your business depends on: websites, apps, ERPs and the cloud underneath.',
+      actions: [h(D.Button, { key: 1, size: 'lg', pill: true }, 'Start a project'), h(D.Button, { key: 2, size: 'lg', pill: true, variant: 'secondary', icon: 'play' }, 'See how we work')],
+      footnote: 'free consultation / reply within one business day'
+    })
+  ));
+</script>
+</body>
+</html>

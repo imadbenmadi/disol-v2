@@ -1,0 +1,27 @@
+<!-- @dsCard group="Patterns" height=508 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>ContactFormPattern — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  function Demo() {
+    var _m = React.useState('');
+    return h('div', { style: { display: 'grid', gridTemplateColumns: '300px 1fr', gap: 32, alignItems: 'start' } },
+      h('div', { style: { display: 'flex', flexDirection: 'column', gap: 24 } },
+        h(D.SectionHeading, { size: 'md', eyebrow: h(D.Tag, null, 'contact'), title: 'Talk to', accent: 'a person.', description: 'Questions, support or partnerships. For a new project, use Start a project.' }),
+        h('ol', { className: 'ds-mono', style: { margin: 0, paddingInlineStart: 18, color: 'var(--text-muted)', fontSize: 12, lineHeight: '22px' } },
+          h('li', null, 'we read every message'), h('li', null, 'routed by topic'), h('li', null, 'reply within one business day'))),
+      h(D.Card, { footer: h(D.Button, { icon: 'mail' }, 'Send message') },
+        h('div', { style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 } },
+          h(D.TextField, { label: 'Name', required: true, autoComplete: 'name' }),
+          h(D.TextField, { label: 'Email', type: 'email', required: true, autoComplete: 'email' }),
+          h('div', { style: { gridColumn: '1 / -1' } }, h(D.Select, { label: 'Topic', placeholder: 'Choose a topic', options: ['Support for an existing service', 'Billing', 'Partnership', 'Press', 'Other'] })),
+          h('div', { style: { gridColumn: '1 / -1' } }, h(D.Textarea, { label: 'Message', value: _m[0], onChange: function (e) { _m[1](e.target.value); }, maxLength: 1000, showCount: true })),
+          h('div', { style: { gridColumn: '1 / -1' } }, h(D.Checkbox, { label: 'I agree to Disol storing this message to reply to me.' })))));
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>
+</body>
+</html>

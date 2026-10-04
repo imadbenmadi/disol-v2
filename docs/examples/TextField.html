@@ -1,0 +1,18 @@
+<!-- @dsCard group="Forms" height=220 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>TextField — preview</title></head>
+<body>
+<div id="root" class="ds-preview" style="display:grid;grid-template-columns:1fr 1fr;align-items:start;"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.TextField, { label: 'Client name', placeholder: 'e.g. Skate Academy', hint: 'As it should appear on invoices.', required: true }),
+    h(D.TextField, { label: 'Email', defaultValue: 'contact@skate', error: 'Enter an email like name@company.dz' }),
+    h(D.TextField, { label: 'Search', icon: 'search', placeholder: 'Search clients, invoices…' }),
+    h(D.TextField, { label: 'Invoice number', defaultValue: 'INV-2026-00142', disabled: true })
+  ));
+</script>
+</body>
+</html>

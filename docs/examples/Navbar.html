@@ -1,0 +1,20 @@
+<!-- @dsCard group="Marketing" height=112 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Navbar — preview</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { className: 'ds-grid-bg', style: { height: 96, paddingTop: 16 } },
+      h(D.Navbar, {
+        solid: true,
+        brand: [h('img', { key: 'i', src: '../../assets/logos/disol-app-icon.jpg', alt: '' }), h('span', { key: 't' }, 'Disol')],
+        links: [{ label: 'Services', href: '#services', current: true }, { label: 'Cloud', href: '#cloud' }, { label: 'Work', href: '#work' }, { label: 'Pricing', href: '#pricing' }, { label: 'Docs', href: '#docs' }],
+        actions: [h(D.StatusPill, { key: 's', href: '#status' }), h(D.Button, { key: 'l', variant: 'ghost', size: 'sm' }, 'Sign in'), h(D.Button, { key: 'c', size: 'sm', pill: true }, 'Start a project')]
+      }))
+  ));
+</script>
+</body>
+</html>

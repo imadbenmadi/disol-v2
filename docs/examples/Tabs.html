@@ -1,0 +1,21 @@
+<!-- @dsCard group="Navigation" height=90 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Tabs — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Tabs, { label: 'Invoice filters', defaultValue: 'all', items: [
+      { value: 'all', label: 'All', count: 142 },
+      { value: 'draft', label: 'Drafts', count: 3 },
+      { value: 'sent', label: 'Sent', count: 21 },
+      { value: 'overdue', label: 'Overdue', count: 4 },
+      { value: 'paid', label: 'Paid' }
+    ] })
+  ));
+</script>
+</body>
+</html>

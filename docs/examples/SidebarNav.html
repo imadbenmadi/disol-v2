@@ -1,0 +1,38 @@
+<!-- @dsCard group="Navigation" height=520 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>SidebarNav — preview</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { style: { height: 520 } },
+      h(D.SidebarNav, {
+        value: 'invoices',
+        brand: [h('img', { key: 'i', src: '../../assets/logos/disol-app-icon.jpg', alt: '' }), h('span', { key: 't' }, 'Disol')],
+        sections: [
+          { items: [{ value: 'home', label: 'Overview', icon: 'home' }] },
+          { title: 'Sales', items: [
+            { value: 'clients', label: 'Clients', icon: 'users' },
+            { value: 'invoices', label: 'Invoices', icon: 'file-text', badge: 4 },
+            { value: 'payments', label: 'Payments', icon: 'wallet' }
+          ] },
+          { title: 'Work', items: [
+            { value: 'projects', label: 'Projects', icon: 'briefcase' },
+            { value: 'meetings', label: 'Meetings', icon: 'calendar' },
+            { value: 'files', label: 'Files', icon: 'folder' },
+            { value: 'reports', label: 'Reports', icon: 'chart' }
+          ] }
+        ],
+        footer: [
+          h(D.Avatar, { key: 'a', name: 'Imed-eddin Benmadi' }),
+          h('div', { key: 'u', className: 'ds-sidebar-user' }, h('div', { className: 'ds-sidebar-user-name' }, 'Imed-eddin Benmadi'), h('div', { className: 'ds-sidebar-user-meta' }, 'Admin')),
+          h(D.Button, { key: 's', variant: 'ghost', size: 'sm', icon: 'settings', 'aria-label': 'Settings' })
+        ]
+      }))
+  ));
+</script>
+</body>
+</html>

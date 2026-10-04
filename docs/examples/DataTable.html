@@ -1,0 +1,34 @@
+<!-- @dsCard group="Data display" height=330 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>DataTable — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  function Demo() {
+    var _s = React.useState([2]);
+    var mono = function (r) { return h('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 13 } }, r.number); };
+    var status = function (r) { return h(D.Badge, { tone: { Paid: 'success', Sent: 'brand', Overdue: 'danger', Draft: 'neutral' }[r.status], dot: true }, r.status); };
+    var client = function (r) { return h('span', { style: { display: 'flex', alignItems: 'center', gap: 8 } }, h(D.Avatar, { name: r.client, size: 'sm' }), r.client); };
+    return h(D.DataTable, {
+      caption: 'Invoices', selected: _s[0], onSelectionChange: _s[1],
+      columns: [
+        { key: 'number', header: 'Invoice', render: mono },
+        { key: 'client', header: 'Client', render: client },
+        { key: 'due', header: 'Due' },
+        { key: 'status', header: 'Status', render: status },
+        { key: 'amount', header: 'Amount', align: 'end' }
+      ],
+      rows: [
+        { id: 1, number: 'INV-2026-00142', client: 'Skate Academy', due: '12 Oct 2026', status: 'Sent', amount: 'DZD 180,000' },
+        { id: 2, number: 'INV-2026-00141', client: 'Afak 2D', due: '28 Sep 2026', status: 'Overdue', amount: 'DZD 95,500' },
+        { id: 3, number: 'INV-2026-00140', client: 'HealthPath Global', due: '20 Sep 2026', status: 'Paid', amount: 'EUR 2,400' },
+        { id: 4, number: 'INV-2026-00139', client: 'Videmaison', due: '—', status: 'Draft', amount: 'DZD 60,000' }
+      ]
+    });
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>
+</body>
+</html>

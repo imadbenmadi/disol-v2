@@ -1,0 +1,28 @@
+<!-- @dsCard group="Infrastructure" height=320 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>FlowCanvas — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { style: { maxWidth: 560 } }, h(D.FlowCanvas, {
+      title: 'New client request', meta: '4 steps / 1 branch', status: h(D.Badge, { tone: 'brand', dot: true }, 'running'), height: 236,
+      nodes: [
+        { id: 'a', x: 20, y: 90, width: 152, title: 'Lead received', meta: 'contact form', ports: 'out', state: 'active' },
+        { id: 'b', x: 204, y: 30, width: 152, title: 'Scope & quote', meta: 'sales · 2h sla' },
+        { id: 'c', x: 204, y: 150, width: 152, title: 'Provision hosting', meta: 'dz-alg-1 · 3 vms', state: 'active' },
+        { id: 'd', x: 388, y: 90, width: 152, title: 'Deploy', meta: 'waiting on approval', ports: 'in', state: 'waiting' }
+      ],
+      edges: [
+        { from: 'a', to: 'b' },
+        { from: 'a', to: 'c', live: true },
+        { from: 'b', to: 'd' },
+        { from: 'c', to: 'd', live: true }
+      ]
+    }))
+  ));
+</script>
+</body>
+</html>

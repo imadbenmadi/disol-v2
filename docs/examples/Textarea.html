@@ -1,0 +1,18 @@
+<!-- @dsCard group="Forms" height=200 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Textarea — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  function Demo() {
+    var _s = React.useState('We need a bilingual website for our clinic with online booking.');
+    return h('div', { style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 } },
+      h(D.Textarea, { label: 'Tell us about your project', value: _s[0], onChange: function (e) { _s[1](e.target.value); }, maxLength: 500, showCount: true, hint: 'Goals, deadline, anything we should know.' }),
+      h(D.Textarea, { label: 'Message', placeholder: 'How can we help?', error: 'Write at least 20 characters so we can reply properly.' }));
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>
+</body>
+</html>

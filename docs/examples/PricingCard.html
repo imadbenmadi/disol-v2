@@ -1,0 +1,16 @@
+<!-- @dsCard group="Marketing" height=480 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>PricingCard — preview</title></head>
+<body>
+<div id="root" class="ds-preview" style="display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;padding-top:28px;"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.PricingCard, { name: 'starter', price: 'DZD 2,500', period: '/ month', description: 'One website on managed hosting.', action: h(D.Button, { variant: 'secondary', block: true }, 'Choose starter'), features: ['1 website, 10 GB SSD', 'Free .dz domain setup', '5 email accounts', 'Weekly backups'] }),
+    h(D.PricingCard, { featured: true, ribbon: 'most chosen', name: 'business', price: 'DZD 6,900', period: '/ month', description: 'For companies running their operations online.', action: h(D.Button, { block: true }, 'Choose business'), features: ['Everything in Starter, plus', '5 websites, 50 GB SSD', 'Daily off-site backups', 'Uptime monitoring and alerts', 'Priority support'] }),
+    h(D.PricingCard, { name: 'enterprise', price: 'Custom', description: 'Dedicated servers, SLA and an engineer who knows your stack.', action: h(D.Button, { variant: 'secondary', block: true }, 'Talk to us'), features: ['Dedicated resources', '99.9% uptime SLA', 'Custom ERP integrations', 'On-site onboarding'] })
+  ));
+</script>
+</body>
+</html>

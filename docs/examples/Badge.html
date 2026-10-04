@@ -1,0 +1,19 @@
+<!-- @dsCard group="Data display" height=72 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Badge — preview</title></head>
+<body>
+<div id="root" class="ds-preview"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Badge, { tone: 'success', dot: true }, 'Paid'),
+    h(D.Badge, { tone: 'warning', dot: true }, 'Due in 3 days'),
+    h(D.Badge, { tone: 'danger', dot: true }, 'Overdue'),
+    h(D.Badge, { tone: 'brand' }, 'In progress'),
+    h(D.Badge, null, 'Draft')
+  ));
+</script>
+</body>
+</html>

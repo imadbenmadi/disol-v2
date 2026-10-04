@@ -1,0 +1,18 @@
+<!-- @dsCard group="Data display" height=80 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Avatar — preview</title></head>
+<body>
+<div id="root" class="ds-preview"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Avatar, { name: 'Imed-eddin Benmadi', size: 'lg' }),
+    h(D.Avatar, { name: 'Muxi Qi' }),
+    h(D.Avatar, { name: 'Salah', size: 'sm' }),
+    h(D.Avatar, { name: 'Disol', src: '../../assets/logos/disol-app-icon.jpg' })
+  ));
+</script>
+</body>
+</html>

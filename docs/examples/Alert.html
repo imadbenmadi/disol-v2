@@ -1,0 +1,18 @@
+<!-- @dsCard group="Feedback" height=352 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>Alert — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col" style="gap:12px;"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Alert, { title: 'Payment details missing' }, 'Add the client’s bank details before sending the first invoice.'),
+    h(D.Alert, { tone: 'success', title: 'Domain connected' }, 'skate-academy.dz now points to your site.'),
+    h(D.Alert, { tone: 'warning', title: 'Hosting renews in 5 days', onClose: function () {} }, 'Renew with Dzsecurity to avoid downtime.'),
+    h(D.Alert, { tone: 'danger', title: 'Sync failed' }, 'Google Drive refused the upload. Reconnect the account and try again.')
+  ));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Infrastructure" height=208 -->
+<!doctype html>
+<html data-theme="dark">
+<head><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../../components/bundle.css"><script src="../../components/lib/react.production.min.js"></script><script src="../../components/lib/react-dom.production.min.js"></script><script src="../../components/bundle.js"></script><meta charset="utf-8"><title>RunLog — preview</title></head>
+<body>
+<div id="root" class="ds-preview-col"></div>
+<script>
+  var D = window.Disol, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(D.Card, { flush: true },
+      h(D.RunLog, { title: 'last runs', items: [
+        { time: '09:41:49', text: 'deploy skate-academy.dz → production', status: 'running', duration: '—' },
+        { time: '09:41:02', text: 'backup db-clinic-01 → off-site', status: 'success', duration: '134 ms' },
+        { time: '09:38:57', text: 'send invoice INV-2026-00142', status: 'success', duration: '2.1 s' },
+        { time: '09:12:10', text: 'renew ssl afak2d.com', status: 'failed', duration: '4.0 s' }
+      ] }))
+  ));
+</script>
+</body>
+</html>
